@@ -51,3 +51,8 @@ The first build may take a long time (and even fail) depending on your machine r
 - **MCP proxy fails to connect** – Confirm `TAVILY_API_KEY` is valid and that port `4000` is free.
 - **Permission denied on port 80** – Run the server on a higher port or execute the script with elevated privileges.
 - **First build fails or takes long time** – set docker resources, allocate more
+
+
+## Documentation
+- `architecture/`: folder documenting design considerations and decisions 
+- `examples/`: folder containing usage example jpegs 

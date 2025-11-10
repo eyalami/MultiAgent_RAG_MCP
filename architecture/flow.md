@@ -74,3 +74,5 @@ Key Notes
             Combines remote content fetching (Tavily HTTP MCP) and summarization (LLM).
 	•	Production plan:
             FAISS embedding refresh would run as a separate cron-triggered or manual job, decoupled from request flow.
+    •	Error Handling:
+            I didn't implement error handling, retries, timeouts, fallback etc. at graph level. I have selected langgraph because it supports all of the above easily through node decorators, error handling states etc. At production level I would implement these. 
