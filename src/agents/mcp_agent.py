@@ -37,7 +37,7 @@ class MCPAgent:
     
     def __init__(self) -> None:
         """Initialize MCP Agent with LLM and workflow graph."""
-        self._max_chars = os.getenv("MAX_CHARS", 12000)  # Max chars to process per article #TODO: make configurable
+        self._max_chars = int(os.getenv("MAX_CHARS", 12000))  # Max chars to process per article #TODO: make configurable
         openai_api_key = os.getenv("OPENAI_API_KEY", "")
         model=os.getenv("OPENAI_CHAT_MODEL", "gpt-4o-mini")
         

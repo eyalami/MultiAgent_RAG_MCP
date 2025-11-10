@@ -37,7 +37,7 @@ class ManagerAgent:
         self,
     ) -> None:
         self._graph: StateGraph = self._build_graph()
-        self._max_kb_results = os.getenv("MAX_ARTICLES", 5)
+        self._max_kb_results = int(os.getenv("MAX_ARTICLES", 5))
         self._kb_agent: KBAgent = KBAgent.get_agent()
         self._mcp_agent: MCPAgent = MCPAgent.get_agent()
       
