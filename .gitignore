@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.venv/
+venv/
+env/
+*.sqlite3
+*.db
+
+# VS Code
+.vscode/
+.history/
+
+# Byte-compiled
+*.log
+*.pot
+*.pyc
+*.pyo
+
+# Environment and cache
+.env
+*.env.local
+.DS_Store
+
+# Docker
+*.pid
+*.tar
+*.img
+*.bak
+*.swp
+
+# Jupyter / notebooks
+.ipynb_checkpoints/
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# Node modules (if UI exists)
+node_modules/
+
+# Local data
+.mcp/

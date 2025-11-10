@@ -1,0 +1,26 @@
+services:
+  multiagent-ha:
+    build: .
+    container_name: multiagent_ha
+    ports:
+      - "8080:80"
+      - "5679:5678"  # Expose debugger port
+    env_file: [.env]
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/data
+      - ./data/cache:/app/data/cache
+      - huggingface_cache:/root/.cache/huggingface
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+        reservations:
+          memory: 2G
+    shm_size: '2gb'
+    tmpfs:
+      - /tmp:size=2G
+
+volumes:
+  huggingface_cache:
+    name: huggingface_cache
