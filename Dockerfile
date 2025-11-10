@@ -37,7 +37,6 @@ RUN mkdir -p /root/.cache/huggingface data/cache && \
 # Copy application files
 COPY src ./src
 COPY data ./data
-COPY .mcp /app/.mcp
 COPY gunicorn_conf.py ./gunicorn_conf.py
 
 # Set environment variables
